@@ -18,6 +18,14 @@ public class PageObjects {
 	 * 
 	 */
 	
-	public static final By login_tb_Username		= By.xpath("");
+	public static final By homepage_dd_CountrySelection		= By.id("selected_country_wrapper");
+	public static final By homepage_cb_CountryName			= By.id("country_radio");
+	public static final By homepage_cb_LanguageName			= By.id("selection_indicator");
+	public static final By homepage_btn_Continue			= By.id("continueButton");
+	public static final By homepage_link_Login				= By.id("login");
+	public static final By homepage_icon_MenuToggle			= By.className("android.widget.ImageButton");
+	public static final By homepage_link_Home				= By.id("menu_text");
+	
+	public static final By bookingpage_popup_Close			= By.className("android.view.View");
 
 }

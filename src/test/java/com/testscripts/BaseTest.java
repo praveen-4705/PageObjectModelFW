@@ -21,6 +21,7 @@ public class BaseTest {
 
 		desiredCapabilities = new DesiredCapabilities();
 		desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android");
+		desiredCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir") + "/src/test/java/com/backup/apps/redBus.apk");
 
 		try {
 			driver = new AndroidDriver<MobileElement>(new URL("http://0.0.0.0:4723/wd/hub"), desiredCapabilities);
@@ -34,6 +35,7 @@ public class BaseTest {
 	@BeforeMethod(alwaysRun = true)
 	public void initDriver() {
 		createDriver();
+		driver.resetApp();
 	}
 
 	@AfterMethod
