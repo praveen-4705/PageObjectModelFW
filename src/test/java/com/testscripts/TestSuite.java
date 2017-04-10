@@ -19,6 +19,10 @@ public class TestSuite extends BaseTest {
 		BookingPage bookingPage	= homePage.navigateToBookingPage();
 		// Close popup
 		bookingPage.closePopup();
+		// Enter source city
+		bookingPage.enterSourceCity();
+		//Enter destination city
+		bookingPage.enterDestinationCity();
 	}
 
 }

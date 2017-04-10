@@ -27,5 +27,11 @@ public class PageObjects {
 	public static final By homepage_link_Home				= By.id("menu_text");
 	
 	public static final By bookingpage_popup_Close			= By.className("android.view.View");
+	public static final By bookingpage_tb_SourceCity		= By.id("cityName1");
+	public static final By bookingpage_tb_Destination		= By.id("cityName2");
+	public static final By bookingpage_tb_EnterCityName		= By.id("search_src_text");
+	public static final By bookingpage_list_SuggestedCities		= By.id("citySuggest");
+	
+	
 
 }

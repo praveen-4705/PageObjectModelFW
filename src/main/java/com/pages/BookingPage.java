@@ -1,21 +1,62 @@
 package com.pages;
 
+import java.util.Random;
+
 import com.objects.PageObjects;
+import com.util.ExcelReader;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
-public class BookingPage extends BasePage{
+public class BookingPage extends BasePage {
 
 	public BookingPage(AppiumDriver<MobileElement> driver) {
 		super(driver);
 	}
-	
+
 	/**
 	 * Close Popup
 	 */
-	public void closePopup(){
+	public void closePopup() {
 		click(PageObjects.bookingpage_popup_Close);
+	}
+
+	/**
+	 * 
+	 * Enter Source City
+	 * 
+	 */
+	public void enterSourceCity() {
+
+		// Click on the Source city text box
+		locateElement(PageObjects.bookingpage_tb_SourceCity).click();
+		
+		// Enter the city
+		String soourceCity	= ExcelReader.readDataFromExcel().get("SourceCities").get(0);
+		type(PageObjects.bookingpage_tb_EnterCityName, soourceCity);
+		
+		locateElement(PageObjects.bookingpage_list_SuggestedCities).click();
+
+	}
+	
+	/**
+	 * 
+	 * Enter DestinationCities
+	 */
+	public void enterDestinationCity() {
+
+		// Click on the Source city text box
+		locateElement(PageObjects.bookingpage_tb_Destination).click();
+		
+		Random r = new Random();
+		int index	= r.nextInt(ExcelReader.readDataFromExcel().get("DestinationCities").size());
+		
+		// Enter the city
+		String soourceCity	= ExcelReader.readDataFromExcel().get("DestinationCities").get(index);
+		type(PageObjects.bookingpage_tb_EnterCityName, soourceCity);
+		
+		locateElement(PageObjects.bookingpage_list_SuggestedCities).click();
+
 	}
 
 }
