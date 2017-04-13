@@ -1,5 +1,6 @@
 package com.testscripts;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.pages.BookingPage;
@@ -15,6 +16,7 @@ public class TestSuite extends BaseTest {
 		homePage.selectCountryAndLanguage();
 		// Click on login
 		homePage.clickOnLogin();
+		Assert.assertTrue(false);
 		// Navigate to booking page by clicking on Home link
 		BookingPage bookingPage	= homePage.navigateToBookingPage();
 		// Close popup
