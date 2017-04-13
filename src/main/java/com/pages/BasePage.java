@@ -108,5 +108,19 @@ public class BasePage {
 
 		return visibleElements;
 	}
+	
+	/**
+	 * Wait for element presence and visibility
+	 * 
+	 * @param by
+	 */
+	public void waitForAnElement(By by){
+		
+		WebDriverWait wait	= new WebDriverWait(driver, 20);
+		
+		wait.until(ExpectedConditions.presenceOfElementLocated(by));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+		
+	}
 
 }

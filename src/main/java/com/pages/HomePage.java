@@ -1,5 +1,7 @@
 package com.pages;
 
+import org.apache.log4j.Logger;
+
 import com.objects.PageObjects;
 
 import io.appium.java_client.AppiumDriver;
@@ -12,6 +14,8 @@ import io.appium.java_client.MobileElement;
  *
  */
 public class HomePage extends BasePage{
+	
+	private static Logger log	= Logger.getLogger(HomePage.class);
 
 	public HomePage(AppiumDriver<MobileElement> driver) {
 		super(driver);
@@ -24,10 +28,13 @@ public class HomePage extends BasePage{
 	 */
 	public void selectCountryAndLanguage(){
 		
+		log.info("Select the Country");
 		// Select country
-		click(PageObjects.homepage_dd_CountrySelection);
+		//click(PageObjects.homepage_dd_CountrySelection);
+		waitForAnElement(PageObjects.homepage_cb_CountryName);
 		getElementList(PageObjects.homepage_cb_CountryName).get(1).click();
 		
+		log.info("Select Language");
 		// Select the language
 		click(PageObjects.homepage_cb_LanguageName);
 		
@@ -41,6 +48,7 @@ public class HomePage extends BasePage{
 	 */
 	public void clickOnLogin(){
 		
+		log.info("Click on Login");
 		// Click on login
 		click(PageObjects.homepage_link_Login);
 		
@@ -53,6 +61,7 @@ public class HomePage extends BasePage{
 	 */
 	public BookingPage navigateToBookingPage(){
 		
+		log.info("Navigate to Booking Page");
 		// Click on menu toggle
 		click(PageObjects.homepage_icon_MenuToggle);
 		
