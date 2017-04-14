@@ -16,7 +16,6 @@ public class TestSuite extends BaseTest {
 		homePage.selectCountryAndLanguage();
 		// Click on login
 		homePage.clickOnLogin();
-		Assert.assertTrue(false);
 		// Navigate to booking page by clicking on Home link
 		BookingPage bookingPage	= homePage.navigateToBookingPage();
 		// Close popup

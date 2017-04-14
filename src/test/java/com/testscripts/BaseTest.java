@@ -1,5 +1,6 @@
 package com.testscripts;
 
+import java.io.IOException;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -14,6 +15,8 @@ import org.testng.annotations.BeforeMethod;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
+import com.util.EmailReport;
 import com.util.Screenshot;
 
 import io.appium.java_client.AppiumDriver;
@@ -62,21 +65,45 @@ public class BaseTest {
 	@AfterMethod
 	public void tearDown(ITestResult result) {
 		
+		
+		
 		if (result.isSuccess()) {
 			
 			Screenshot.getScreenshot(driver, result.getName() + "- Pass");
 			
+			String destPath = System.getProperty("user.dir") + "/src/test/java/com/screenshot/"+result.getName() + "- Pass.jpeg";
+			
 			extentTest.pass("Test Passed");
+			
+			try {
+				extentTest.addScreenCaptureFromPath(destPath);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			
 		}else {
 			Screenshot.getScreenshot(driver, result.getName() + "- Fail");
 			
+			String destPath = System.getProperty("user.dir") + "/src/test/java/com/screenshot/"+result.getName() + "- Fail.jpeg";
+			
 			extentTest.fail(result.getThrowable());
+			
+			try {
+				extentTest.addScreenCaptureFromPath(destPath);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		
 		extentReports.flush();
+		
 		log.info("Quiting Driver");
+		
 		driver.quit();
+		
+		EmailReport.sendReport();
 	}
 	
 	
@@ -89,9 +116,16 @@ public class BaseTest {
 		
 		extentHtmlReporter	= new ExtentHtmlReporter(System.getProperty("user.dir") + "/src/test/java/com/reports/AutomationReport.html");
 		
+		extentHtmlReporter.config().setDocumentTitle("Appium Automation Test Report");
+		
+		extentHtmlReporter.config().setReportName("Automation Report");
+		
+		extentHtmlReporter.config().setTheme(Theme.DARK);
+		
 		extentReports	= new ExtentReports();
 		
 		extentReports.attachReporter(extentHtmlReporter);
+		
 		
 		extentTest	= extentReports.createTest(testName);
 		

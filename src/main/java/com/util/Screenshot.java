@@ -11,6 +11,13 @@ import org.openqa.selenium.WebDriver;
 public class Screenshot {
 
 	public static void getScreenshot(WebDriver driver, String nameOfTheScreenShot) {
+		
+		try {
+			Thread.sleep(2000l);
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 

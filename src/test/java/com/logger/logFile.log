@@ -33,3 +33,44 @@
 2017-04-13 22:11:40,618 INFO  [BaseTest] Resetting App 
 2017-04-13 22:11:45,479 INFO  [HomePage] Select the Country 
 2017-04-13 22:12:07,344 INFO  [BaseTest] Quiting Driver 
+2017-04-14 21:11:11,169 INFO  [BaseTest] Resetting App 
+2017-04-14 21:11:15,172 INFO  [HomePage] Select the Country 
+2017-04-14 21:11:18,435 INFO  [HomePage] Select Language 
+2017-04-14 21:11:21,833 INFO  [HomePage] Click on Login 
+2017-04-14 21:11:26,774 INFO  [BaseTest] Quiting Driver 
+2017-04-14 21:16:48,224 INFO  [BaseTest] Resetting App 
+2017-04-14 21:16:52,985 INFO  [HomePage] Select the Country 
+2017-04-14 21:16:56,170 INFO  [HomePage] Select Language 
+2017-04-14 21:17:00,022 INFO  [HomePage] Click on Login 
+2017-04-14 21:17:06,567 INFO  [BaseTest] Quiting Driver 
+2017-04-14 21:18:44,491 INFO  [BaseTest] Resetting App 
+2017-04-14 21:18:48,702 INFO  [HomePage] Select the Country 
+2017-04-14 21:18:52,102 INFO  [HomePage] Select Language 
+2017-04-14 21:18:55,884 INFO  [HomePage] Click on Login 
+2017-04-14 21:18:58,991 INFO  [HomePage] Navigate to Booking Page 
+2017-04-14 21:19:02,922 INFO  [BookingPage] Close Popup 
+2017-04-14 21:19:05,651 INFO  [BookingPage] Enter Source City 
+2017-04-14 21:19:21,303 INFO  [BookingPage] Enter Destination City 
+2017-04-14 21:19:39,237 INFO  [BaseTest] Quiting Driver 
+2017-04-14 21:26:42,907 INFO  [BaseTest] Resetting App 
+2017-04-14 21:26:47,295 INFO  [HomePage] Select the Country 
+2017-04-14 21:26:50,571 INFO  [HomePage] Select Language 
+2017-04-14 21:26:53,905 INFO  [HomePage] Click on Login 
+2017-04-14 21:26:57,003 INFO  [HomePage] Navigate to Booking Page 
+2017-04-14 21:27:00,675 INFO  [BookingPage] Close Popup 
+2017-04-14 21:27:03,657 INFO  [BookingPage] Enter Source City 
+2017-04-14 21:27:18,267 INFO  [BookingPage] Enter Destination City 
+2017-04-14 21:27:35,902 INFO  [BaseTest] Quiting Driver 
+2017-04-14 21:53:02,226 INFO  [BaseTest] Resetting App 
+2017-04-14 21:54:29,835 INFO  [BaseTest] Resetting App 
+2017-04-14 21:54:33,726 INFO  [HomePage] Select the Country 
+2017-04-14 21:57:33,917 INFO  [BaseTest] Resetting App 
+2017-04-14 21:57:40,566 INFO  [HomePage] Select the Country 
+2017-04-14 21:57:57,894 INFO  [HomePage] Select Language 
+2017-04-14 21:58:03,793 INFO  [HomePage] Click on Login 
+2017-04-14 21:58:11,578 INFO  [BaseTest] Quiting Driver 
+2017-04-14 22:01:40,800 INFO  [BaseTest] Resetting App 
+2017-04-14 22:01:45,230 INFO  [HomePage] Select the Country 
+2017-04-14 22:01:49,293 INFO  [HomePage] Select Language 
+2017-04-14 22:01:53,083 INFO  [HomePage] Click on Login 
+2017-04-14 22:01:59,958 INFO  [BaseTest] Quiting Driver 
