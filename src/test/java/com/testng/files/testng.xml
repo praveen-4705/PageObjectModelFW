@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Smoke Test" verbose="1">
+	<test name="Smoke Scripts">
+		<classes>
+			<class name="com.testscripts.TestSuite" />
+		</classes>
+	</test>
+</suite>
