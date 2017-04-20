@@ -38,7 +38,7 @@ public class BaseTest {
 		
 //		log.info("Setting the Capabilities");
 		desiredCapabilities = new DesiredCapabilities();
-		desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android");
+		desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "e5a116b0");
 		desiredCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir") + "/src/test/java/com/backup/apps/redBus.apk");
 
 		try {
