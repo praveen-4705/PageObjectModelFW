@@ -5,8 +5,6 @@ import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import org.apache.log4j.Logger;
-import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -34,17 +32,17 @@ public class BaseTest {
 	
 	DesiredCapabilities desiredCapabilities;
 	
-	private static Logger log	= Logger.getLogger(BaseTest.class);
+//	private static Logger log	= Logger.getLogger(BaseTest.class);
 
 	public void createDriver() {
 		
-		log.info("Setting the Capabilities");
+//		log.info("Setting the Capabilities");
 		desiredCapabilities = new DesiredCapabilities();
 		desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "e5a116b0");
 		desiredCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir") + "/src/test/java/com/backup/apps/redBus.apk");
 
 		try {
-			log.info("Setting Driver");
+//			log.info("Setting Driver");
 			driver = new AndroidDriver<MobileElement>(new URL("http://0.0.0.0:4723/wd/hub"), desiredCapabilities);
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
@@ -56,9 +54,9 @@ public class BaseTest {
 	@BeforeMethod(alwaysRun = true)
 	public void initDriver(Method m) {
 		createDriver();
-		loggerSetup();
+//		loggerSetup();
 		setUpExtentReports(m.getName());
-		log.info("Resetting App");
+//		log.info("Resetting App");
 		driver.resetApp();
 	}
 
@@ -99,7 +97,7 @@ public class BaseTest {
 		
 		extentReports.flush();
 		
-		log.info("Quiting Driver");
+//		log.info("Quiting Driver");
 		
 		driver.quit();
 		
@@ -109,7 +107,7 @@ public class BaseTest {
 	
 	public void loggerSetup(){
 		System.setProperty("logfilename", System.getProperty("user.dir")+"/src/test/java/com/logger/logFile");
-		DOMConfigurator.configure(System.getProperty("user.dir")+"/src/test/java/com/logger/log4j.xml");
+//		DOMConfigurator.configure(System.getProperty("user.dir")+"/src/test/java/com/logger/log4j.xml");
 	}
 	
 	public void setUpExtentReports(String testName){

@@ -2,7 +2,6 @@ package com.pages;
 
 import java.util.Random;
 
-import org.apache.log4j.Logger;
 
 import com.objects.PageObjects;
 import com.util.ExcelReader;
@@ -13,7 +12,7 @@ import io.appium.java_client.android.AndroidDriver;
 
 public class BookingPage extends BasePage {
 	
-	private static Logger log	= Logger.getLogger(BookingPage.class);
+//	private static Logger log	= Logger.getLogger(BookingPage.class);
 
 	public BookingPage(AndroidDriver<MobileElement> driver) {
 		super(driver);
@@ -23,7 +22,7 @@ public class BookingPage extends BasePage {
 	 * Close Popup
 	 */
 	public void closePopup() {
-		log.info("Close Popup");
+//		log.info("Close Popup");
 		click(PageObjects.bookingpage_popup_Close);
 	}
 
@@ -34,7 +33,7 @@ public class BookingPage extends BasePage {
 	 */
 	public void enterSourceCity() {
 		
-		log.info("Enter Source City");
+//		log.info("Enter Source City");
 
 		// Click on the Source city text box
 		locateElement(PageObjects.bookingpage_tb_SourceCity).click();
@@ -53,7 +52,7 @@ public class BookingPage extends BasePage {
 	 */
 	public void enterDestinationCity() {
 		
-		log.info("Enter Destination City");
+//		log.info("Enter Destination City");
 
 		// Click on the Source city text box
 		locateElement(PageObjects.bookingpage_tb_Destination).click();
