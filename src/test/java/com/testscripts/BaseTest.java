@@ -26,7 +26,7 @@ import io.appium.java_client.remote.MobileCapabilityType;
 
 public class BaseTest {
 
-	protected AppiumDriver<MobileElement> driver;
+	protected AndroidDriver<MobileElement> driver;
 	
 	protected ExtentReports extentReports;
 	protected ExtentHtmlReporter extentHtmlReporter;
