@@ -74,3 +74,21 @@
 2017-04-14 22:01:49,293 INFO  [HomePage] Select Language 
 2017-04-14 22:01:53,083 INFO  [HomePage] Click on Login 
 2017-04-14 22:01:59,958 INFO  [BaseTest] Quiting Driver 
+2017-04-19 21:01:02,512 INFO  [BaseTest] Resetting App 
+2017-04-19 21:01:10,059 INFO  [HomePage] Select the Country 
+2017-04-19 21:01:14,174 INFO  [HomePage] Select Language 
+2017-04-19 21:01:18,081 INFO  [HomePage] Click on Login 
+2017-04-19 21:01:22,198 INFO  [HomePage] Navigate to Booking Page 
+2017-04-19 21:01:25,497 INFO  [BookingPage] Close Popup 
+2017-04-19 21:01:29,512 INFO  [BookingPage] Enter Source City 
+2017-04-19 21:01:44,857 INFO  [BookingPage] Enter Destination City 
+2017-04-19 21:02:02,621 INFO  [BaseTest] Quiting Driver 
+2017-04-19 21:29:42,550 INFO  [BaseTest] Resetting App 
+2017-04-19 21:29:48,987 INFO  [HomePage] Select the Country 
+2017-04-19 21:29:54,334 INFO  [HomePage] Select Language 
+2017-04-19 21:29:58,549 INFO  [HomePage] Click on Login 
+2017-04-19 21:30:02,277 INFO  [HomePage] Navigate to Booking Page 
+2017-04-19 21:30:05,576 INFO  [BookingPage] Close Popup 
+2017-04-19 21:30:09,361 INFO  [BookingPage] Enter Source City 
+2017-04-19 21:30:25,012 INFO  [BookingPage] Enter Destination City 
+2017-04-19 21:30:45,227 INFO  [BaseTest] Quiting Driver 

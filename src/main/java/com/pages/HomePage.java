@@ -49,7 +49,7 @@ public class HomePage extends BasePage{
 	public void clickOnLogin(){
 		
 //		log.info("Click on Login");
-		// Click on login
+		// Click on logi
 		click(PageObjects.homepage_link_Login);
 		
 	}
