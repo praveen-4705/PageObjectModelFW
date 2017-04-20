@@ -6,6 +6,7 @@ import com.objects.PageObjects;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
 
 /**
  * This class contains all the HomePage related methods and utilities
@@ -17,7 +18,7 @@ public class HomePage extends BasePage{
 	
 	private static Logger log	= Logger.getLogger(HomePage.class);
 
-	public HomePage(AppiumDriver<MobileElement> driver) {
+	public HomePage(AndroidDriver<MobileElement> driver) {
 		super(driver);
 	}
 	

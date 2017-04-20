@@ -11,12 +11,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
 
 public class BasePage {
 
-	protected AppiumDriver<MobileElement> driver;
+	protected AndroidDriver<MobileElement> driver;
 
-	public BasePage(AppiumDriver<MobileElement> driver) {
+	public BasePage(AndroidDriver<MobileElement> driver) {
 		this.driver = driver;
 	}
 

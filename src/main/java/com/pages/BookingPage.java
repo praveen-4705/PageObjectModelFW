@@ -9,12 +9,13 @@ import com.util.ExcelReader;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
 
 public class BookingPage extends BasePage {
 	
 	private static Logger log	= Logger.getLogger(BookingPage.class);
 
-	public BookingPage(AppiumDriver<MobileElement> driver) {
+	public BookingPage(AndroidDriver<MobileElement> driver) {
 		super(driver);
 	}
 
